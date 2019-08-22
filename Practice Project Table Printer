@@ -6,4 +6,4 @@ tableData = [['apples', 'oranges', 'cherries', 'banana'],
 
 col_width = max(len(word) for row in tableData for word in row) + 2
 for row in zip(*tableData):
-        print("".join(word.ljust(col_width) for word in row))
+        print("".join(word.rjust(col_width) for word in row))
