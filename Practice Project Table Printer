@@ -3,7 +3,9 @@ tableData = [['apples', 'oranges', 'cherries', 'banana'],
 			['Alice', 'Bob', 'Carol', 'David'],
 			['dogs', 'cats','moose', 'goose']]
 
+def table_printer():
+        col_width = max(len(word) for list in tableData for word in list) + 2 # sets maxium column widths
+        for list in zip(*tableData): # Unpacks table to print each list vertically
+                print("".join(word.rjust(col_width) for word in list)) # Formats tabe with padding 
 
-col_width = max(len(word) for row in tableData for word in row) + 2
-for row in zip(*tableData):
-        print("".join(word.rjust(col_width) for word in row))
+table_printer()
