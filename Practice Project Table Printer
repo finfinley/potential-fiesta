@@ -1,0 +1,9 @@
+# Table Printer // Practice Project
+tableData = [['apples', 'oranges', 'cherries', 'banana'],
+			['Alice', 'Bob', 'Carol', 'David'],
+			['dogs', 'cats','moose', 'goose']]
+
+
+col_width = max(len(word) for row in tableData for word in row) + 2
+for row in zip(*tableData):
+        print("".join(word.ljust(col_width) for word in row))
