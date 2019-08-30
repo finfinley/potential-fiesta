@@ -1,0 +1,16 @@
+#! python3
+# This program will take user input for mad libs and create a text document. 
+
+# Gets user input for madlubs
+adjective = input('Give me an adjective: ')
+noun = input('Give me a noun: ')
+verb = input('Give me a verb: ')
+noun2 = input('Give me another noune: ')
+
+# Creates mad libs file and opens for writing
+madLibsFile = open('madlibs.txt', 'w')
+
+# Writes text to file
+madLibsFile.write('The {} panda walked to the {} and then {}. A nearby {} was unaffected by these events'.format(adjective, noun, verb, noun2))
+
+print('Mad libs file has been created.')
